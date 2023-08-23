@@ -22,6 +22,9 @@ namespace API.Controllers
         [HttpGet("servererror")]
         public ActionResult GetServerError()
         {
+            var thing = _context.Products.Find(42);
+
+            var thingToReturn = thing.ToString();
             return Ok();
         }
 
